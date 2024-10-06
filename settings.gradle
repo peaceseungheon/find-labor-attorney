@@ -1,1 +1,5 @@
 rootProject.name = 'find-labor-attorney'
+include 'labor-api'
+include 'domain'
+include 'database'
+include 'database:mysql-jpa'
