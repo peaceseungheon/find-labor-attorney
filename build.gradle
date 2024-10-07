@@ -5,7 +5,7 @@ plugins {
 }
 
 allprojects {
-	group = 'kr.co.sh'
+	group = 'kr.co.sh.labor'
 	version = '0.0.1-SNAPSHOT'
 	sourceCompatibility = '17'
 
@@ -31,14 +31,18 @@ subprojects {
 	}
 
 	dependencies {
-
-
 		compileOnly 'org.projectlombok:lombok'
 		annotationProcessor 'org.projectlombok:lombok'
 		testImplementation 'org.springframework.boot:spring-boot-starter-test'
 		testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	}
 }
+
+rootProject.subprojects {subProject-> {
+	if(!subProject.name.startsWith("api-")){
+		subProject.tasks["bootJar"].enabled = false
+	}
+}}
 
 
 
