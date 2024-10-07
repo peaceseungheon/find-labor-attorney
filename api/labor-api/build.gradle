@@ -2,6 +2,8 @@
 
 dependencies {
     implementation project(':domain-labor-core')
+    implementation project(':database-mysql-jpa')
+
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'io.jsonwebtoken:jjwt-api:0.11.5'

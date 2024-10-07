@@ -1,12 +1,15 @@
 spring:
   application:
     name: FindLaborAttorney
+  profiles:
+    include: mysql-jpa
 
-logging:
-  level:
-    root: "warn"
-    org.springframework.web: "debug"
-    org.hibernate: "error"
+
+#logging:
+#  level:
+#    root: "warn"
+#    org.springframework.web: "debug"
+#    org.hibernate: "error"
 
 jwt:
   secret-key: brARdeyb1oktW0ftClgQ3f9wr5sEXyis2D+hb7RSI42axW5i9xlIRt5+Aw1qWRSc
